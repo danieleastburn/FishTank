@@ -6,7 +6,7 @@ class fish {
        this._coinReady = 0
        this._growthStage = 0
        this._fishDirection = true
-       this._hunger = 100
+       this._hunger = 101
        this._fishX = Math.floor(Math.random()*1200) + 50 
        this._fishY = -40
        this._inTank = false
