@@ -73,6 +73,7 @@ const drawTank = () => {
         fishArray[i].coinDrop();
         fishArray[i].generateCoin();
         fishArray[i].removeDeath(i);
+        fishArray[i].feed();
 
     }
 

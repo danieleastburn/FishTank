@@ -76,18 +76,12 @@ class fish {
     }
 
     selectDestination(){
-        /*console.log("Dest" + this._destinationX + this._destinationY)
-        console.log("Fish" + this._fishX + this._fishY)
-        console.log(this._movingX)
-        console.log(this._movingY)
-        console.log(this._inTank)*/
+     
 
-        if(this._inTank == true){
+        if(this._inTank == true && foodArray.length == 0){
            if(this._movingX == false && this._movingY == false){
             this._destinationX = Math.floor(Math.random()*1200) + 50
             this._destinationY = Math.floor(Math.random()*600) + 50
-            console.log("Destination X: " + this._destinationX)
-            console.log("Destination Y: " + this._destinationY)
 
             this._movingX = true
             this._movingY = true
@@ -158,6 +152,16 @@ class fish {
     }
     growth(){}
     feed(){
+        if(this._hunger < 50 && foodArray.length > 0){
+            this._destinationX = foodArray[1]._foodX
+            this._destinationY = foodArray[1]._foodY
+
+            this._movingX = true
+            this._movingY = true
+
+            
+
+        }
         
     }
 
