@@ -4,20 +4,20 @@ balanceText.textContent = "$ "+balance
 
 document.getElementById("addFish").addEventListener("click", function(e){
     if(balance >= 100){
-        
         balance -= 100
-
         balanceText.textContent = "$ "+balance
-
-        
-
         let addedFish = new fish("name", "Orange")
         fishArray.push(addedFish)
+    }  
+})
 
-    }
-    
-
-    
+document.getElementById("foodType").addEventListener("click", function(e){
+    if(balance >= 200){
+        balance -= 200
+        balanceText.textContent = "$ "+balance
+        let addedFish = new fish("name", "Orange")
+        fishArray.push(addedFish)
+    }  
 })
 
 document.getElementById("myCanvas").addEventListener("click", function(e){
@@ -39,14 +39,12 @@ document.getElementById("myCanvas").addEventListener("click", function(e){
             balanceText.textContent = "$ "+balance
             coinArray.splice(s, 1);
             
-        }
-        
-        
+        }  
         
     }
 
     
-    if((foodArray.length < 5 && coinCollect == false) && balance >= 2){
+    if((foodArray.length < foodCount && coinCollect == false) && balance >= 2){
     
         
         let foodNum = foodArray.length + 1
